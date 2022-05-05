@@ -1,0 +1,62 @@
+@use 'themes' as *;
+
+@use '~@nebular/theme/styles/globals' as *;
+@import '~@nebular/bootstrap/styles/globals';
+
+@include nb-install() {
+  @include nb-theme-global();
+  @include nb-bootstrap-global();
+};
+
+.header{
+  .burger{
+    padding-right:20px;
+    margin-right:20px;
+    border-right:1px solid #edf1f7;
+    a{
+      text-decoration: none;
+      nb-icon{
+        font-size:1.75rem;
+        color: #8f9bb3;
+      }
+    }
+  }
+
+  .logo a{
+    color: #222b45;
+    font-size: 1.75rem;
+    white-space: nowrap;
+    text-decoration: none;
+  }
+
+  &-user{
+    margin-left:auto;
+    display:flex;
+    align-items: center;
+    button{
+      margin-left:20px;
+    }
+  }
+
+  app-header{
+    width:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.mainform{
+  align-items: center;
+  display: flex;
+  .row{
+    justify-content: center;
+    flex-grow:2;
+  }
+  &__row{
+    margin-top:-15px;
+    > div{
+      margin-top:15px;
+    }
+  }
+}
